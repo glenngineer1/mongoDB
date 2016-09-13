@@ -37,3 +37,6 @@
     db.restaurants.find({borough: "Brooklyn"}).sort({"name": 1}).skip(20).limit(10)
 
 10. Provide a query that returns all pizza and Italian restaurants in reverse alphabetic order.
+
+    db.restaurants.find({cuisine: "Italian", cuisine: "Pizza"}).sort({"name": -1})
+
