@@ -30,8 +30,10 @@
 
 8. Provide a query showing the 5 pizza restaurants in the Bronx with the highest score on an evaluation.
 
-    
+    db.restaurants.find({cuisine: "Pizza", borough: "Bronx"}).sort({"grades.score": -1}).limit(5)
 
 9. Provide a query to find all of the restaurants in Brooklynn and list only the 21st-30th results when ordered alphabetically by name.
+
+    db.restaurants.find({borough: "Brooklyn"}).sort({"name": 1}).skip(20).limit(10)
 
 10. Provide a query that returns all pizza and Italian restaurants in reverse alphabetic order.
